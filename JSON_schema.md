@@ -36,19 +36,31 @@ id라는 식별자를 각각의 스키마에 고유하게 지정할 수 있다.
 {
   "$schema": "http://json-schema.org/schema#",
   "id": "http://yourdomain.com/schemas/myschema.json",
-  
   "title": "Yewon's schema",
   "description": "Yewon is me",
   "type": "object",
   "properties": {
-    "name": {"type": "string"},
-    "age": {"type": "integer"},
-    "school": {"type": "string"},
+    "name": {
+      "type": "string"
+    },
+    "age": {
+      "type": "integer"
+    },
+    "school": {
+      "type": "string"
+    },
     "family": {
-      "type": "object",
-      "properties": {
-        "familyName": {"type": "string"},
-        "age": {"type": "integer"}
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "familyName": {
+            "type": "string"
+          },
+          "age": {
+            "type": "integer"
+          }
+        }
       }
     }
   }
